@@ -2,9 +2,9 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30// See https://aka.ms/new-console-template for more information
 
-int Recours(int m, int n)
+int Recours(int m, int n)                                       // метод находит сумму натуральных элементов в промежутке от M до N
 {
-    if (m > n) return 0;
+    if (m > n) return 0;                                        // условие выхода из рекурсии
     return (m + Recours(m + 1, n));
 }
 
@@ -16,4 +16,4 @@ int n = Convert.ToInt32(Console.ReadLine());
 if (n < m)
     Console.WriteLine("Число n должно быть больше числа m.");	                        //  запрос первого числа
 else
-    Console.WriteLine($"Сумма элементов от {m} до {m} равна {Recours(m, n)}.");
+    Console.WriteLine($"Сумма элементов от {m} до {n} равна {Recours(m, n)}.");
